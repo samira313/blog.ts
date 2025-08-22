@@ -1,48 +1,16 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    "module": "ESnext",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node", 
-
-
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-  
-    "target": "es2020",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
-
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+    "target": "es2020",                 // modern JavaScript output
+    "module": "esnext",                 // use ES Modules (import/export)
+    "rootDir": "./src",                 // main source code inside src
+    "outDir": "./dist",                 // compiled output goes to dist
+    "moduleResolution": "node",         // module resolution like Node.js
+    "esModuleInterop": true,            // allow default import from CommonJS
+    "forceConsistentCasingInFileNames": true, // enforce consistent file name casing
+    "strict": true,                     // enable strict type-checking
+    "skipLibCheck": true,               // skip type checking of node_modules
+    "sourceMap": true                   // generate source maps for easier debugging
+  },
+  "include": ["src"],                   // only compile files inside src
+  "exclude": ["node_modules", "dist"]   // exclude node_modules and dist from compilation
 }
